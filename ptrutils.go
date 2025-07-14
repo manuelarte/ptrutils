@@ -1,12 +1,12 @@
 package ptrutils
 
-// DefOr Dereference the pointer unless nil, then it returns defaultValue.
-func DefOr[T any](ptr *T, defaultValue T) T {
-	return DefOrL(ptr, LazyIdentity(defaultValue))
+// DerefOr Dereference the pointer unless nil, then it returns defaultValue.
+func DerefOr[T any](ptr *T, defaultValue T) T {
+	return DerefOrL(ptr, LazyIdentity(defaultValue))
 }
 
-// DefOrL Dereference the pointer unless nil, then it runs a function that returns a default value.
-func DefOrL[T any](ptr *T, f func() T) T {
+// DerefOrL Dereference the pointer unless nil, then it runs a function that returns a default value.
+func DerefOrL[T any](ptr *T, f func() T) T {
 	if ptr == nil {
 		return f()
 	} else {

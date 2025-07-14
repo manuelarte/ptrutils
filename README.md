@@ -28,20 +28,20 @@ myStruct := MyStruct {
 }
 ```
 
-### DefOr
+### DerefOr
 
 Simple function that either dereferences a pointer or, if `nil`, returns a default value.
 
 ```go
 var p *string
-ptrutils.DefOr(p, "default")
+ptrutils.DerefOr(p, "default")
 ```
 
-### DefOrL
+### DerefOrL
 
 Simple function that either dereferences a pointer or, if `nil`, it runs the function that returns a default value.
 
 ```go
 var p *string
-ptrutils.DefOrL(p, ptrutils.LazyIdentity("default"))
+ptrutils.DerefOrL(p, ptrutils.LazyIdentity("default"))
 ```

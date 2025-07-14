@@ -2,7 +2,7 @@ package ptrutils
 
 import "testing"
 
-func TestPointerUtils_DefOr_String(t *testing.T) {
+func TestDerefOr_String(t *testing.T) {
 	example := "example"
 
 	tests := map[string]struct {
@@ -23,7 +23,7 @@ func TestPointerUtils_DefOr_String(t *testing.T) {
 	}
 	for name, test := range tests {
 		t.Run(name, func(t *testing.T) {
-			actual := DefOr(test.pointer, test.defaultValue)
+			actual := DerefOr(test.pointer, test.defaultValue)
 			if actual != test.expected {
 				t.Errorf("expected: %s, got: %s", test.expected, actual)
 			}
@@ -31,7 +31,7 @@ func TestPointerUtils_DefOr_String(t *testing.T) {
 	}
 }
 
-func TestPointerUtils_DefOrL_String(t *testing.T) {
+func TestDerefOrL_String(t *testing.T) {
 	example := "example"
 
 	tests := map[string]struct {
@@ -52,7 +52,7 @@ func TestPointerUtils_DefOrL_String(t *testing.T) {
 	}
 	for name, test := range tests {
 		t.Run(name, func(t *testing.T) {
-			actual := DefOrL(test.pointer, LazyIdentity(test.defaultValue))
+			actual := DerefOrL(test.pointer, LazyIdentity(test.defaultValue))
 			if actual != test.expected {
 				t.Errorf("expected: %s, got: %s", test.expected, actual)
 			}
@@ -60,7 +60,7 @@ func TestPointerUtils_DefOrL_String(t *testing.T) {
 	}
 }
 
-func TestPointerUtils_PointerTo_String(t *testing.T) {
+func TestPtr_String(t *testing.T) {
 	example := "example"
 	emptyString := ""
 
