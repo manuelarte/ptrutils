@@ -11,7 +11,7 @@ Some utility functions to use with pointers in Go.
 To use it run:
 
 ```bash
-go install github.com/manuelarte/ptrutils@latest
+go get github.com/manuelarte/ptrutils@latest
 ```
 
 ## 🚀 Features
