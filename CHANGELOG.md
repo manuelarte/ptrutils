@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/manuelarte/ptrutils/compare/v1.0.0...v1.0.1) (2025-07-14)
+
+
+### Bug Fixes
+
+* renaming functions ([e17ed3a](https://github.com/manuelarte/ptrutils/commit/e17ed3ac1fcf8993dc01da533238176661460f77))
+
 ## 1.0.0 (2025-07-14)
 
 
