@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/manuelarte/ptrutils/compare/v1.0.0...v1.1.0) (2025-07-14)
+
+
+### Features
+
+* adding ptrutils ([d694538](https://github.com/manuelarte/ptrutils/commit/d69453821ff04b7ac365da653baf2c919bfc663c))
+
 ## 1.0.0 (2025-07-14)
 
 
