@@ -1,20 +1,29 @@
-# TODO Project Name
+# 🛠️Ptr Utils
 
-[![Go](https://github.com/manuelarte/xxxx/actions/workflows/go.yml/badge.svg)](https://github.com/manuelarte/xxxx/actions/workflows/go.yml)
-[![Go Report Card](https://goreportcard.com/badge/github.com/manuelarte/xxxx)](https://goreportcard.com/report/github.com/manuelarte/xxxx)
-![version](https://img.shields.io/github/v/release/manuelarte/xxxx)
+[![Go](https://github.com/manuelarte/ptrutils/actions/workflows/go.yml/badge.svg)](https://github.com/manuelarte/ptrutils/actions/workflows/go.yml)
+[![Go Report Card](https://goreportcard.com/badge/github.com/manuelarte/ptrutils)](https://goreportcard.com/report/github.com/manuelarte/ptrutils)
+![version](https://img.shields.io/github/v/release/manuelarte/ptrutils)
 
-> [!NOTE]
-> Project info
+Some utility functions to use with pointers in Go.
 
 ## ⬇️  Getting Started
 
-To install it run:
+To use it run:
 
 ```bash
-go install github.com/manuelarte/xxxx@latest
+go install github.com/manuelarte/ptrutils@latest
 ```
 
 ## 🚀 Features
 
-Explain features
+### Ptr
+
+Simple function that converts a value to a pointer. Very useful if you want to inline pointers initialization.
+
+### DefOrF
+
+Simple function that either dereferences a pointer or, if `nil`, it runs the function that returns a default value.
+
+### DefOr
+
+Simple function that either dereference a pointer or, if `nil`, it runs the function that returns a default value.

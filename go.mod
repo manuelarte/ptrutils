@@ -1,3 +1,3 @@
-module github.com/manuelarte/go-template
+module github.com/manuelarte/ptrutils
 
 go 1.23.0
