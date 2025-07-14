@@ -18,12 +18,30 @@ go get github.com/manuelarte/ptrutils@latest
 
 ### Ptr
 
-Simple function that converts a value to a pointer. Very useful if you want to inline pointers initialization.
+Simple function that converts a value to a pointer. Handy if you want to inline pointers' initialization.
+
+```go
+annoyingWay := "myAnnoyingWay"
+myStruct := MyStruct {
+    AnnoyingWay: annoyingWay,
+	LibWay: ptrutils.Ptr("myLibWay")
+}
+```
 
 ### DefOrF
 
 Simple function that either dereferences a pointer or, if `nil`, it runs the function that returns a default value.
 
+```go
+var p *string
+ptrutils.DefOrL(p, ptrutils.LazyIdentity("default"))
+```
+
 ### DefOr
 
-Simple function that either dereference a pointer or, if `nil`, it runs the function that returns a default value.
+Simple function that either dereferences a pointer or, if `nil`, returns a default value.
+
+```go
+var p *string
+ptrutils.DefOr(p, "default")
+```
