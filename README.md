@@ -23,8 +23,8 @@ Simple function that converts a value to a pointer. Handy if you want to inline 
 ```go
 annoyingWay := "myAnnoyingWay"
 myStruct := MyStruct {
-    AnnoyingWay: annoyingWay,
-	LibWay: ptrutils.Ptr("myLibWay")
+  AnnoyingWay: annoyingWay,
+  LibWay: ptrutils.Ptr("myLibWay")
 }
 ```
 
