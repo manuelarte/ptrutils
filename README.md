@@ -28,7 +28,7 @@ myStruct := MyStruct {
 }
 ```
 
-### DefOrF
+### DefOrL
 
 Simple function that either dereferences a pointer or, if `nil`, it runs the function that returns a default value.
 
