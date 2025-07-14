@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.1.0](https://github.com/manuelarte/ptrutils/compare/v1.0.1...v1.1.0) (2025-07-14)
+
+
+### Features
+
+* adding ptrutils ([d694538](https://github.com/manuelarte/ptrutils/commit/d69453821ff04b7ac365da653baf2c919bfc663c))
+
+
+### Bug Fixes
+
+* renaming functions ([e17ed3a](https://github.com/manuelarte/ptrutils/commit/e17ed3ac1fcf8993dc01da533238176661460f77))
+
 ## [1.0.1](https://github.com/manuelarte/ptrutils/compare/v1.0.0...v1.0.1) (2025-07-14)
 
 
