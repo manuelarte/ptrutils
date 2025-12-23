@@ -52,7 +52,7 @@ func TestDerefOrL_String(t *testing.T) {
 	}
 	for name, test := range tests {
 		t.Run(name, func(t *testing.T) {
-			actual := DerefOrL(test.pointer, LazyIdentity(test.defaultValue))
+			actual := DerefOrL(test.pointer, lazyIdentity(test.defaultValue))
 			if actual != test.expected {
 				t.Errorf("expected: %s, got: %s", test.expected, actual)
 			}
@@ -68,10 +68,10 @@ func TestPtr_String(t *testing.T) {
 		value func() *string
 	}{
 		"string with value": {
-			value: LazyIdentity(&example),
+			value: lazyIdentity(&example),
 		},
 		"empty string": {
-			value: LazyIdentity(&emptyString),
+			value: lazyIdentity(&emptyString),
 		},
 	}
 	for name, test := range tests {
