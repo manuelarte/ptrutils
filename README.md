@@ -43,5 +43,5 @@ Simple function that either dereferences a pointer or, if `nil`, it runs the fun
 
 ```go
 var p *string
-ptrutils.DerefOrL(p, ptrutils.LazyIdentity("default"))
+ptrutils.DerefOrL(p, expensiveOperation())
 ```
