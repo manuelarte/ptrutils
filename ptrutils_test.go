@@ -8,24 +8,24 @@ func TestDerefOr_String(t *testing.T) {
 	tests := map[string]struct {
 		pointer      *string
 		defaultValue string
-		expected     string
+		want         string
 	}{
 		"pointer is null": {
 			pointer:      nil,
 			defaultValue: "defaultValue",
-			expected:     "defaultValue",
+			want:         "defaultValue",
 		},
 		"pointer is not null": {
 			pointer:      &example,
 			defaultValue: "defaultValue",
-			expected:     example,
+			want:         example,
 		},
 	}
 	for name, test := range tests {
 		t.Run(name, func(t *testing.T) {
-			actual := DerefOr(test.pointer, test.defaultValue)
-			if actual != test.expected {
-				t.Errorf("expected: %s, got: %s", test.expected, actual)
+			got := DerefOr(test.pointer, test.defaultValue)
+			if got != test.want {
+				t.Errorf("DerefOr = %s, want: %s", got, test.want)
 			}
 		})
 	}
@@ -37,24 +37,24 @@ func TestDerefOrL_String(t *testing.T) {
 	tests := map[string]struct {
 		pointer      *string
 		defaultValue string
-		expected     string
+		want         string
 	}{
 		"pointer is null": {
 			pointer:      nil,
 			defaultValue: "defaultValue",
-			expected:     "defaultValue",
+			want:         "defaultValue",
 		},
 		"pointer is not null": {
 			pointer:      &example,
 			defaultValue: "defaultValue",
-			expected:     example,
+			want:         example,
 		},
 	}
 	for name, test := range tests {
 		t.Run(name, func(t *testing.T) {
-			actual := DerefOrL(test.pointer, lazyIdentity(test.defaultValue))
-			if actual != test.expected {
-				t.Errorf("expected: %s, got: %s", test.expected, actual)
+			got := DerefOrL(test.pointer, lazyIdentity(test.defaultValue))
+			if got != test.want {
+				t.Errorf("DerefOrL = %s, want: %s", got, test.want)
 			}
 		})
 	}
@@ -76,11 +76,11 @@ func TestPtr_String(t *testing.T) {
 	}
 	for name, test := range tests {
 		t.Run(name, func(t *testing.T) {
-			expected := test.value()
+			want := test.value()
 
-			actual := Ptr(*expected)
-			if *actual != *test.value() {
-				t.Errorf("expected: %v, got: %v", expected, actual)
+			got := Ptr(*want)
+			if *got != *test.value() {
+				t.Errorf("Ptr = %v, want: %v", got, want)
 			}
 		})
 	}
