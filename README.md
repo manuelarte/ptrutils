@@ -28,6 +28,9 @@ myStruct := MyStruct {
 }
 ```
 
+> [!IMPORTANT]
+> If you are using go 1.25 or higher you don't need this function and you can use `new`.
+
 ### DerefOr
 
 Simple function that either dereferences a pointer or, if `nil`, returns a default value.
